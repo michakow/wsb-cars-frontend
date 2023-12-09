@@ -1,0 +1,28 @@
+.car-list-wrapper {
+  padding: 30px;
+}
+
+.car-list-label {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.car-list {
+  width: 90%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.car-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+}
+.car-list li:nth-child(even) {
+  background-color: rgb(233, 233, 233);
+}
+.car-list li button:first-of-type {
+  margin-left: auto;
+}
