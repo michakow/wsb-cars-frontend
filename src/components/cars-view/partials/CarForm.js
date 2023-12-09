@@ -43,7 +43,7 @@ function CarForm({ getCars, currentCar, handleUpdateCar }) {
       )
       .then((res) => {
         getCars();
-        setColor('');
+        setColor('#ffffff');
         setModel('');
         setProducent('');
         setWeight('');
