@@ -1,0 +1,10 @@
+.sign-in-up-label {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.sign-in-up-switch {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Toaster } from 'react-hot-toast';
+import AuthView from './components/auth-view/AuthView';
+import CarsView from './components/cars-view/CarsView';
+import Header from './components/Header';
 
 function App() {
+  const [isLogged, setIsLogged] = useState(false);
+
+  function handleLogIn(value) {
+    setIsLogged(value);
+  }
+
+  function logOut() {
+    setIsLogged(false);
+    localStorage.clear();
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <Toaster position="bottom-left" />
+      <Header logOut={logOut} isLogged={isLogged} />
+      <main>
+        {isLogged ? (
+          <CarsView />
+        ) : (
+          <AuthView handleLogIn={handleLogIn} />
+        )}
+      </main>
     </div>
   );
 }
