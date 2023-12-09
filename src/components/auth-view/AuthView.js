@@ -74,12 +74,14 @@ function AuthView({ handleLogIn }) {
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             placeholder="Login"
+            required
           />
           <input
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             type="password"
             placeholder="Hasło"
+            required
           />
           <button type="submit">
             {signInMode ? 'Zaloguj się' : 'Zarejestruj się'}
