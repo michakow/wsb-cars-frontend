@@ -36,7 +36,7 @@ function CarDetails({ currentCar, handleCurrentCar, getCars }) {
   return (
     <div className="car-details-wrapper">
       <p className="car-details-label">
-        Szczegóły samochodu {currentCar.model} od ID {currentCar._id}
+        Szczegóły samochodu {currentCar.model} o ID {currentCar._id}
       </p>
       {!isEditMode ? (
         <div className="car-details">
